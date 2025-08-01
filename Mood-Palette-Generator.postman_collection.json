@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "mood-palette-generator-api",
+		"name": "Mood Palette Generator API",
+		"description": "A collection for testing the Mood Palette Generator backend API endpoints. This API generates color palettes based on mood descriptions using AI.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"health"
+					]
+				},
+				"description": "Check if the API is running and healthy"
+			},
+			"response": []
+		},
+		{
+			"name": "API Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Get API information and available endpoints"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mood\": \"peaceful sunset\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Generate a 4-color palette based on a mood description"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette - Happy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mood\": \"happy and energetic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Generate a palette for a happy mood"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette - Calm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mood\": \"calm and serene\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Generate a palette for a calm mood"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette - Mysterious",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mood\": \"mysterious and dark\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Generate a palette for a mysterious mood"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette - Error (Empty Mood)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mood\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Test error handling with empty mood"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Palette - Error (Missing Mood)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/generate-palette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"generate-palette"
+					]
+				},
+				"description": "Test error handling with missing mood field"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recent Palettes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/palettes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"palettes"
+					]
+				},
+				"description": "Get the 50 most recent palettes from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "404 Error Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/nonexistent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"nonexistent"
+					]
+				},
+				"description": "Test 404 error handling for non-existent endpoints"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Pre-request script to log request details",
+					"console.log('Making request to: ' + pm.request.url);",
+					"console.log('Method: ' + pm.request.method);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Test script to validate responses",
+					"pm.test('Status code is 200', function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test('Response time is less than 5000ms', function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+					"});",
+					"",
+					"pm.test('Response has JSON content type', function () {",
+					"    pm.response.to.have.header('Content-Type');",
+					"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+} 
