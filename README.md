@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mood Palette Generator Backend
 
 A Node.js/Express.js backend API that generates color palettes based on mood descriptions using OpenAI GPT-3.5.
@@ -198,3 +199,21 @@ MIT License - feel free to use this project for your own applications.
 ## Support
 
 For issues and questions, please open an issue on the repository. 
+=======
+﻿# MoodToColor
+
+A complete mood-to-color palette generator application.
+
+## Structure
+- Backend/ - Express.js API with AI integration
+- Frontend/ - (Coming soon)
+- Mobile/ - (Coming soon)
+
+## Quick Start
+\\\ash
+cd Backend
+npm install
+npm run dev
+\\\
+
+>>>>>>> 0565ebbee9949df1584e3a61fe181f92c2040add
